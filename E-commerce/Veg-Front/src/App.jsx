@@ -37,22 +37,52 @@
 
 
 
-import { BrowserRouter } from "react-router-dom";
-import Navbar from "./components/common/Navbar";
-import Footer from "./components/common/Footer";
+// import { BrowserRouter } from "react-router-dom";
+// import Navbar from "./components/common/Navbar";
+// import Footer from "./components/common/Footer";
+// import AppRouter from "./router/AppRouter";
+// import { CartProvider } from "./context/CartContext";
+
+// export default function App() {
+//   return (
+
+
+//     <>
+
+
+   
+//       <AppRouter />
+   
+
+  
+//     </>
+//     // <CartProvider>
+//     //   <BrowserRouter>
+//     //     <Navbar />
+//     //     <main style={{ minHeight: "80vh" }}>
+//     //       <AppRouter />
+//     //     </main>
+//     //     <Footer />
+//     //   </BrowserRouter>
+//     // </CartProvider>
+//   );
+// }
+
+
+
+
+
+// src/App.jsx
 import AppRouter from "./router/AppRouter";
 import { CartProvider } from "./context/CartContext";
+import "./assets/styles/global.css";
 
-export default function App() {
+function App() {
   return (
     <CartProvider>
-      <BrowserRouter>
-        <Navbar />
-        <main style={{ minHeight: "80vh" }}>
-          <AppRouter />
-        </main>
-        <Footer />
-      </BrowserRouter>
+      <AppRouter />
     </CartProvider>
   );
 }
+
+export default App;
